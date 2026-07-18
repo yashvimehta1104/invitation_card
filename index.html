@@ -31,8 +31,8 @@
     }
 
     .book {
-      width: 380px; /* થોડી સાઇઝ એડજસ્ટ કરી */
-      height: 520px;
+      width: 400px;
+      height: 550px;
       position: relative;
       transform-style: preserve-3d;
       transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,7 +49,7 @@
       top: 0;
       left: 0;
       border-radius: 0 15px 15px 0;
-      box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.5);
     }
 
     .cover {
@@ -72,76 +72,83 @@
       border-radius: 0 15px 15px 0;
     }
 
-    /* FRONT PAGE: પીચ અને મિન્ટ ગ્રીન ગ્રેડિયન્ટ */
+    /* FRONT PAGE: રોઝ ગોલ્ડ મેટાલિક ગ્રેડિયન્ટ બેકગ્રાઉન્ડ */
     .cover-front {
-      background: linear-gradient(135deg, #ffdab9, #e8f5e9);
+      background: linear-gradient(135deg, #e5b2a4, #b8877b, #e5b2a4, #d19a8c);
       color: #333;
-      border-left: 8px solid #b2dfdb;
+      border-left: 10px solid #3A1E27;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px;
+      padding: 40px;
       text-align: center;
+      box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
     }
 
     .spine-ribbon {
       position: absolute;
       left: 0;
       top: 0;
-      width: 10px;
+      width: 12px;
       height: 100%;
-      background: #d4af37;
+      background: #3A1E27;
     }
 
     .badge {
-      background: #d4af37;
-      color: #111;
-      font-size: 0.7rem; /* નાની સાઇઝ */
+      background: #3A1E27;
+      color: #e5b2a4;
+      font-size: 0.75rem;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 5px 15px;
       border-radius: 20px;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
     }
 
     .logo-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem; /* નાની સાઇઝ */
+      font-size: 2.6rem;
       font-weight: 700;
-      color: #c59b27;
+      color: #3A1E27;
       letter-spacing: 1px;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
     }
 
     .logo-tagline {
-      font-size: 0.8rem; /* નાની સાઇઝ */
-      color: #555;
-      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #4A353B;
+      font-weight: 600;
+      margin-bottom: 25px;
+      letter-spacing: 0.5px;
     }
 
     .couple-name-front {
       font-family: 'Alex Brush', cursive;
-      font-size: 1.6rem; /* નાની સાઇઝ */
-      color: #222;
-      margin-bottom: 20px;
+      font-size: 2.3rem;
+      color: #ffffff;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 4px rgba(58, 30, 39, 0.4);
     }
 
     .click-instruction {
       font-size: 0.75rem;
-      color: #666;
-      letter-spacing: 1px;
+      color: #3A1E27;
+      font-weight: 600;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-top: 20px;
+      margin-top: 30px;
+      opacity: 0.8;
     }
 
-    /* LEFT PAGE (Welcome Page) - લાઇટ મિન્ટ ક્રીમ બેકગ્રાઉન્ડ */
+    /* LEFT PAGE (Welcome Page) */
     .cover-back {
-      background: #f4f9f4; 
+      background: #fcf8f2;
       transform: rotateY(180deg);
       border-right: 1px solid #e0e0e0;
       border-radius: 15px 0 0 15px;
-      padding: 30px;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -151,30 +158,30 @@
     .welcome-panel h3 {
       font-family: 'Playfair Display', serif;
       color: #c59b27;
-      font-size: 2rem; /* નાની સાઇઝ */
+      font-size: 2.4rem;
       margin-bottom: 5px;
     }
 
     .couple-name-inner {
       font-family: 'Alex Brush', cursive;
-      font-size: 1.9rem; /* નાની સાઇઝ */
+      font-size: 2.2rem;
       color: #c59b27;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .cursive-text {
       font-family: 'Alex Brush', cursive;
-      font-size: 1.5rem; /* નાની સાઇઝ */
+      font-size: 1.8rem;
       line-height: 1.4;
       color: #222222;
     }
 
-    /* RIGHT PAGE (Details Page) - લાઇટ મિન્ટ ક્રીમ બેકગ્રાઉન્ડ */
+    /* RIGHT PAGE (Details Page) */
     .inner-page {
-      background: #f4f9f4; 
+      background: #fcf8f2;
       color: #333;
-      padding: 30px;
+      padding: 40px;
       z-index: 1;
       display: flex;
       flex-direction: column;
@@ -184,62 +191,66 @@
 
     .event-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem; /* નાની સાઇઝ */
+      font-size: 2.4rem;
       color: #c59b27;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .details-box {
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
 
     .date {
       font-weight: 600;
       color: #222;
-      margin-top: 10px;
-      font-size: 1rem; /* નાની સાઇઝ */
+      margin-top: 15px;
+      font-size: 1.1rem;
     }
 
     .time {
       color: #c59b27;
       font-weight: 600;
-      margin-top: 3px;
-      font-size: 0.9rem;
+      margin-top: 5px;
     }
 
     .venue-box h4 {
       font-family: 'Playfair Display', serif;
       color: #c59b27;
-      font-size: 1.1rem; /* નાની સાઇઝ */
-      margin-bottom: 5px;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
       letter-spacing: 1px;
     }
 
     .venue-box p {
-      font-size: 0.85rem; /* નાની સાઇઝ */
+      font-size: 0.95rem;
       color: #444;
-      line-height: 1.5;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
+  <!-- 🎵 ઓડિયો પ્લેયર (અહીં મેં ડેમો લિંક મૂકી છે, તમે તમારી લિંક બદલી શકો છો) -->
+  <audio id="bgSong" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+  </audio>
+
   <div class="book-container">
     <div class="book" id="book" onclick="toggleBook()">
       
-      <!-- 1. બુકનું કવર સેક્શન -->
+      <!-- ૧. બુકનું કવર -->
       <div class="cover">
-        <!-- ફ્રન્ટ પેજ (પીચ અને મિન્ટ ગ્રીન લુક) -->
+        <!-- રોઝ ગોલ્ડ ફ્રન્ટ પેજ -->
         <div class="cover-front">
           <div class="spine-ribbon"></div>
           <div class="badge">RING CEREMONY</div>
           <h1 class="logo-title">Engagement</h1>
           <p class="logo-tagline">Save The Date • 16.08.2026</p>
           <p class="couple-name-front">K❤️H</p>
-          <p class="click-instruction"> Click to Open</p>
+          <p class="click-instruction">📖 Click to Open</p>
         </div>
         
-        <!-- ડાબી બાજુનું પેજ (Welcome) -->
+        <!-- ડાબી બાજુનું પેજ (Welcome Page) -->
         <div class="cover-back">
           <div class="welcome-panel">
             <h3>Welcome</h3>
@@ -249,22 +260,22 @@
         </div>
       </div>
 
-      <!-- 2. જમણી બાજુનું પેજ (Details) -->
+      <!-- ૨. જમણી બાજુનું પેજ (Details Page) -->
       <div class="inner-page">
         <h3 class="event-title">Save The Date</h3>
         
         <div class="details-box">
-          <p class="cursive-text" style="font-size: 1.4rem;">
-            We request the pleasure of your company at the engagement ceremony of our daughter <span style="font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:bold; color:#c59b27;">Krupa</span> with <span style="font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:bold; color:#c59b27;">Henil</span>.
+          <p class="cursive-text" style="font-size: 1.6rem;">
+            We request the pleasure of your company at the engagement ceremony of our daughter <span style="font-family:'Playfair Display', serif; font-size:1.2rem; font-weight:bold; color:#c59b27;">Krupa</span> with <span style="font-family:'Playfair Display', serif; font-size:1.2rem; font-weight:bold; color:#c59b27;">Henil</span>.
           </p>
           <div class="date">Sunday, August 16, 2026</div>
-          <div class="time">Time: 11:00 AM onwards</div>
+          <div class="time">Time: 4:00 PM onwards</div>
         </div>
 
         <div class="venue-box">
           <h4>📍 VENUE</h4>
           <p>
-            <strong>Hatkesh Complex,</strong><br>
+            <strong>Hatkesh Complex Road,</strong><br>
             near Bus Station, Chhathi Bari,<br>
             Bhuj, Gujarat 370001
           </p>
@@ -277,7 +288,18 @@
   <script>
     function toggleBook() {
       const book = document.getElementById('book');
+      const song = document.getElementById('bgSong');
+      
       book.classList.toggle('open');
+      
+      // બુક ખુલતા જ ગીત વાગશે, અને બંધ થતા પોઝ થઈ જશે
+      if (book.classList.contains('open')) {
+        song.play().catch(error => {
+          console.log("બ્રાઉઝરે ઓટોપ્લે બ્લોક કર્યું, ક્લિકથી ચાલુ થશે:", error);
+        });
+      } else {
+        song.pause();
+      }
     }
   </script>
 </body>

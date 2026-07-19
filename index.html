@@ -42,7 +42,8 @@
       transform: translateX(120px); 
     }
 
-    .cover, .inner-page {
+    /* બધા પેજ માટે કોમન બેઝ સ્ટાઈલ */
+    .page {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -50,38 +51,48 @@
       left: 0;
       border-radius: 0 15px 15px 0;
       box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .cover {
       transform-style: preserve-3d;
       transform-origin: left center;
       transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 2;
-      cursor: pointer;
     }
 
-    .book.open .cover {
-      transform: rotateY(-180deg);
-    }
-
-    .cover-front, .cover-back {
+    .page-front, .page-back {
       position: absolute;
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background: #f4f9f4;
+    }
+
+    .page-front {
       border-radius: 0 15px 15px 0;
     }
 
-    .cover-front {
+    .page-back {
+      transform: rotateY(180deg);
+      border-radius: 15px 0 0 15px;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    /* ૧. મુખ્ય કવર પેજ */
+    #cover {
+      z-index: 5;
+      cursor: pointer;
+    }
+    .book.open #cover {
+      transform: rotateY(-180deg);
+      z-index: 3;
+    }
+
+    #cover .page-front {
       background: linear-gradient(135deg, #ffdab9, #e8f5e9);
       color: #333;
       border-left: 8px solid #b2dfdb;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-      text-align: center;
     }
 
     .spine-ribbon {
@@ -93,23 +104,12 @@
       background: #d4af37;
     }
 
-    .badge {
-      background: #d4af37;
-      color: #111;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-    }
-
     .logo-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
+      font-family: 'Alex Brush', cursive;
+      font-size: 3.2rem;
+      font-weight: 500;
       color: #c59b27;
-      letter-spacing: 1px;
+      letter-spacing: 0px;
       margin-bottom: 8px;
     }
 
@@ -134,28 +134,19 @@
       margin-top: 20px;
     }
 
-    .cover-back {
-      background: #f4f9f4; 
-      transform: rotateY(180deg);
-      border-right: 1px solid #e0e0e0;
-      border-radius: 15px 0 0 15px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .welcome-panel h3 {
-      font-family: 'Playfair Display', serif;
-      color: #c59b27;
-      font-size: 2rem;
-      margin-bottom: 5px;
+    /* વેલકમ પેનલના કર્સિવ ગોલ્ડન હેડિંગ */
+    .welcome-panel h3, .welcome-panel h4 {
+      font-family: 'Alex Brush', cursive !important;
+      color: #c59b27 !important;
+      font-size: 1.5rem !important;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      font-weight: normal !important;
     }
 
     .couple-name-inner {
       font-family: 'Alex Brush', cursive;
-      font-size: 1.9rem;
+      font-size: 2.2rem;
       color: #c59b27;
       font-weight: bold;
       margin-bottom: 15px;
@@ -168,106 +159,227 @@
       color: #222222;
     }
 
-    .inner-page {
-      background: #f4f9f4; 
-      color: #333;
-      padding: 30px;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
+    /* ૨. બીજું પેજ */
+    #page2 {
+      z-index: 4;
+      cursor: pointer;
+    }
+    .book.page2-open #page2 {
+      transform: rotateY(-180deg);
+      z-index: 6; 
     }
 
     .event-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #c59b27;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
+    }
+
+    .family-details {
+      font-size: 0.78rem;
+      color: #444;
+      line-height: 1.6;
+      margin: 10px 0;
+      background: rgba(197, 155, 39, 0.05);
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px dashed rgba(197, 155, 39, 0.3);
+      text-align: center;
+    }
+
+    .family-row {
+      margin-bottom: 8px;
+    }
+
+    .family-highlight {
+      color: #c59b27;
+      font-weight: 600;
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .family-names {
+      font-weight: 600;
+      color: #222;
     }
 
     .details-box {
-      margin-bottom: 25px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .program-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .translated-quote {
+      font-family: 'Alex Brush', cursive;
+      font-size: 1.5rem;
+      line-height: 1.4;
+      color: #c59b27;
+      margin-bottom: 15px;
+    }
+
+    .next-btn {
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: #c59b27;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ૩. ત્રીજું પેજ */
+    #page3 {
+      z-index: 1;
     }
 
     .date {
       font-weight: 600;
       color: #222;
       margin-top: 10px;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     .time {
       color: #c59b27;
       font-weight: 600;
-      margin-top: 3px;
-      font-size: 0.9rem;
+      margin-top: 5px;
+      font-size: 1rem;
+      margin-bottom: 20px;
     }
 
     .venue-box h4 {
       font-family: 'Playfair Display', serif;
       color: #c59b27;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-bottom: 5px;
       letter-spacing: 1px;
     }
 
     .venue-box p {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #444;
       line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .compliments-box h4 {
+      font-family: 'Playfair Display', serif;
+      color: #c59b27;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .compliments-box p {
+      font-family: 'Alex Brush', cursive;
+      font-size: 1.6rem;
+      color: #222;
     }
   </style>
 </head>
 <body>
 
-  <!-- મ્યુઝિક પ્લેયર (છુપાયેલું રહેશે અને લૂપમાં ચાલશે) -->
   <audio id="bgMusic" src="music.mp3" loop></audio>
 
   <div class="book-container">
-    <div class="book" id="book" onclick="toggleBook()">
+    <div class="book" id="book">
       
-      <!-- 1. બુકનું કવર સેક્શન -->
-      <div class="cover">
-        <!-- ફ્રન્ટ પેજ -->
-        <div class="cover-front">
+      <!-- પેજ ૧: મુખ્ય કવર પેજ (રીંગ સેરેમની બેજ હટાવી દીધો છે) -->
+      <div class="page" id="cover" onclick="openBook()">
+        <div class="page-front">
           <div class="spine-ribbon"></div>
-          <div class="badge">RING CEREMONY</div>
-          <h1 class="logo-title">Engagement</h1>
+          <h1 class="logo-title" style="margin-top: 20px;">Engagement</h1>
           <p class="logo-tagline">Save The Date • 16.08.2026</p>
           <p class="couple-name-front">K❤️H</p>
-          <p class="click-instruction"> Click to Open</p>
+          <p class="click-instruction">Click to Open</p>
         </div>
         
-        <!-- ડાબી બાજુનું પેજ (Welcome) -->
-        <div class="cover-back">
+        <div class="page-back">
           <div class="welcome-panel">
-            <h3>Welcome</h3>
+            <h4>Antani Family Warmly Welcomes You<br>
+            For Engagement Ceremony Of</h4>
             <div class="couple-name-inner">K❤️H</div>
             <p class="cursive-text">Together with our families, we warmly invite you to our Engagement Ceremony.</p>
           </div>
         </div>
       </div>
 
-      <!-- 2. જમણી બાજુનું પેજ (Details) -->
-      <div class="inner-page">
-        <h3 class="event-title">Save The Date</h3>
-        
-        <div class="details-box">
-          <p class="cursive-text" style="font-size: 1.4rem;">
-            We request the pleasure of your company at the engagement ceremony of our daughter <span style="font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:bold; color:#c59b27;">Krupa</span> with <span style="font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:bold; color:#c59b27;">Henil</span>.
-          </p>
-          <div class="date">Sunday, August 16, 2026</div>
-          <div class="time">Time: 11:00 AM onwards</div>
+      <!-- પેજ ૨: કંકોતરીની વિગતો અને ટાંકણા -->
+      <div class="page" id="page2" onclick="flipPage2()">
+        <div class="page-front">
+          <h3 class="event-title">Save The Date<br>
+          <span style="font-size: 1.1rem;">16/08/2026</span></h3>
+          
+          <div class="family-details">
+            <div class="family-row">
+              <span class="family-highlight">Daughter Of</span>
+              <span class="family-names">JwalantKumar Antani & PoojaBen Antani</span>
+            </div>
+            <div class="family-row">
+              <span class="family-highlight">Niece Of</span>
+              <span class="family-names">AshutoshBhai Antani & KunjalBen Antani</span>
+            </div>
+            <div class="family-row">
+              <span class="family-highlight">Niece Of</span>
+              <span class="family-names">ArpanBhai Antani & AnandiBen Antani</span>
+            </div>
+            <div style="margin-top: 5px;">
+              <span class="family-names"><span style="color:#c59b27;">Sister Of:</span><br> Khushi Antani</span>
+            </div>
+            <p style="font-size: 0.7rem; font-style: italic; color: #666; border-top: 1px solid rgba(197, 155, 39, 0.2); padding-top: 6px; margin-top: 6px;">
+              "You all are warmly invited to our Daughter/Niece's/Sister's Ring Ceremony"
+            </p>
+          </div>
+
+          <div class="details-box">
+            <p class="cursive-text" style="font-size: 1.3rem;">
+              We request the pleasure of your company at the engagement ceremony of our daughter <br>
+              <span style="font-family:'Playfair Display', serif; font-size:1rem; font-weight:bold; color:#c59b27;">Krupa</span> 
+              with 
+              <span style="font-family:'Playfair Display', serif; font-size:1rem; font-weight:bold; color:#c59b27;">Henil</span>.
+            </p>
+          </div>
+          <div class="next-btn">Click for Venue Info ➔</div>
         </div>
 
-        <div class="venue-box">
-          <h4>📍 VENUE</h4>
-          <p>
-            <strong>Hatkesh Complex,</strong><br>
-            near Bus Station, Chhathi Bari,<br>
-            Bhuj, Gujarat 370001
-          </p>
+        <div class="page-back">
+          <div class="program-box">
+            <p class="translated-quote">
+              "This is a bond of two loving hearts,<br>
+              It is a dream of a lifelong togetherness.<br>
+              On this auspicious occasion of ours,<br>
+              We look forward to your love and blessings."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- પેજ ૩: છેલ્લું સ્થિર પેજ -->
+      <div class="page" id="page3">
+        <div class="page-front">
+          <div class="venue-box">
+            <div class="date">Sunday, August 16, 2026</div>
+            <div class="time">Time: 11:00 AM onwards</div> 
+            
+            <h4>📍 VENUE</h4>
+            <p><strong>Hatkesh Complex,</strong> <br>
+               near Bus Station, Chhathi Bari,<br>
+               Bhuj, Gujarat 370001.
+            </p>
+          </div>
+          
+          <div class="compliments-box">
+            <h4>With Best Compliments From:</h4>
+            <p>All Relatives & Friends</p>
+          </div>
         </div>
       </div>
 
@@ -275,20 +387,23 @@
   </div>
 
   <script>
-    function toggleBook() {
-      const book = document.getElementById('book');
-      const music = document.getElementById('bgMusic');
-      
-      // પુસ્તકની સ્થિતિ બદલવી (Open / Close)
-      book.classList.toggle('open');
-      
-      // જો પુસ્તક ખૂલે તો મ્યુઝિક ચાલુ થશે, બંધ થાય તો મ્યુઝિક અટકી જશે
-      if (book.classList.contains('open')) {
-        music.play().catch(error => {
-          console.log("Autoplay block protection: ", error);
-        });
+    const book = document.getElementById('book');
+    const music = document.getElementById('bgMusic');
+
+    function openBook() {
+      if (!book.classList.contains('open')) {
+        book.classList.add('open');
+        music.play().catch(error => console.log("Autoplay blocked: ", error));
       } else {
+        book.classList.remove('open');
+        book.classList.remove('page2-open');
         music.pause();
+      }
+    }
+
+    function flipPage2() {
+      if (book.classList.contains('open')) {
+        book.classList.toggle('page2-open');
       }
     }
   </script>

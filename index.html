@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Engagement Invitation</title>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   
@@ -38,7 +38,7 @@
       height: 530px;
       position: relative;
       transform-style: preserve-3d;
-      transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .book.open {
@@ -52,10 +52,10 @@
       top: 0;
       left: 0;
       border-radius: 0 15px 15px 0;
-      box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.35);
       transform-style: preserve-3d;
       transform-origin: left center;
-      transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .page-front, .page-back {
@@ -109,7 +109,7 @@
 
     .heart-outline-wrapper {
       width: 260px;
-      height: 120px;
+      height: 100px;
       margin: 5px auto;
       display: flex;
       justify-content: center;
@@ -136,13 +136,6 @@
       margin-bottom: 12px;
     }
 
-    .couple-name-front {
-      font-family: 'Alex Brush', cursive;
-      font-size: 1.6rem;
-      color: #222;
-      margin-bottom: 15px;
-    }
-
     .click-instruction {
       font-size: 0.75rem;
       color: #666;
@@ -155,17 +148,9 @@
       font-family: 'Alex Brush', cursive !important;
       color: #c59b27 !important;
       font-size: 1.4rem !important;
-      line-height: 1.4;
-      margin-bottom: 15px;
+      line-height: 1.3;
+      margin-bottom: 10px;
       font-weight: normal !important;
-    }
-
-    .couple-name-inner {
-      font-family: 'Alex Brush', cursive;
-      font-size: 2rem;
-      color: #c59b27;
-      font-weight: bold;
-      margin-bottom: 15px;
     }
 
     .cursive-text {
@@ -186,18 +171,18 @@
 
     .event-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       color: #c59b27;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .family-details {
       font-size: 0.75rem;
       color: #444;
-      line-height: 1.5;
-      margin: 8px 0;
+      line-height: 1.4;
+      margin: 6px 0;
       background: rgba(197, 155, 39, 0.05);
-      padding: 10px;
+      padding: 8px;
       border-radius: 8px;
       border: 1px dashed rgba(197, 155, 39, 0.3);
       text-align: center;
@@ -205,14 +190,14 @@
     }
 
     .family-row {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .family-highlight {
       color: #c59b27;
       font-weight: 600;
       display: block;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -223,8 +208,8 @@
     }
 
     .details-box {
-      margin-top: 8px;
-      margin-bottom: 8px;
+      margin-top: 6px;
+      margin-bottom: 6px;
     }
 
     .program-box {
@@ -237,14 +222,14 @@
 
     .translated-quote {
       font-family: 'Alex Brush', cursive;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       line-height: 1.4;
       color: #c59b27;
       margin-bottom: 15px;
     }
 
     .next-btn {
-      margin-top: 10px;
+      margin-top: 8px;
       font-size: 0.7rem;
       color: #c59b27;
       font-weight: bold;
@@ -259,49 +244,49 @@
     .date {
       font-weight: 600;
       color: #222;
-      margin-top: 10px;
-      font-size: 1rem;
+      margin-top: 6px;
+      font-size: 0.95rem;
     }
 
     .time {
       color: #c59b27;
       font-weight: 600;
-      margin-top: 5px;
-      font-size: 0.95rem;
-      margin-bottom: 15px;
+      margin-top: 4px;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
     }
 
     .venue-simple {
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .venue-simple h4 {
       font-family: 'Playfair Display', serif;
       color: #c59b27;
-      font-size: 1.1rem;
-      margin-bottom: 6px;
+      font-size: 1rem;
+      margin-bottom: 4px;
       letter-spacing: 1px;
     }
 
     .venue-simple p {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #444;
-      line-height: 1.4;
-      margin-bottom: 12px;
+      line-height: 1.35;
+      margin-bottom: 10px;
     }
 
-    /* 📍 Live Location Button - Dusty Rose Pink Theme Color */
+    /* 📍 Mobile Friendly Map Button */
     .map-btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #d87093; /* 🎨 Card Matched Color */
+      background: #d87093;
       color: #ffffff;
       text-decoration: none;
-      padding: 8px 16px;
+      padding: 8px 14px;
       border-radius: 20px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       transition: background 0.3s ease;
@@ -314,57 +299,79 @@
     .compliments-box h4 {
       font-family: 'Playfair Display', serif;
       color: #c59b27;
-      font-size: 1rem;
-      margin-top: 10px;
-      margin-bottom: 4px;
+      font-size: 0.95rem;
+      margin-top: 8px;
+      margin-bottom: 2px;
     }
 
     .compliments-box p {
       font-family: 'Alex Brush', cursive;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #222;
     }
 
-    @media screen and (max-width: 768px) {
+    /* 📱📱 Mobile Responsive Styling Optimization 📱📱 */
+    @media screen and (max-width: 600px) {
       .book {
-        width: 290px;
-        height: 490px;
+        width: 160px;
+        height: 480px;
       }
 
       .book.open {
-        transform: translateX(35px); 
+        transform: translateX(80px); /* Adjust view center on phone */
       }
 
       .heart-outline-wrapper {
-        width: 220px;
-        height: 100px;
+        width: 100%;
+        height: 85px;
       }
 
       .logo-title {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
       }
 
       .cursive-text {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+      }
+
+      .translated-quote {
+        font-size: 1.15rem;
       }
 
       .family-details {
-        font-size: 0.68rem;
-        padding: 6px;
+        font-size: 0.65rem;
+        padding: 5px;
+      }
+
+      .family-highlight {
+        font-size: 0.6rem;
       }
 
       .page-front, .page-back {
-        padding: 15px 10px;
+        padding: 12px 8px;
+      }
+
+      .venue-simple p {
+        font-size: 0.75rem;
       }
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 380px) {
       .book {
-        width: 260px;
-        height: 460px;
+        width: 145px;
+        height: 450px;
       }
+
       .book.open {
-        transform: translateX(20px);
+        transform: translateX(72px);
+      }
+
+      .logo-title {
+        font-size: 2rem;
+      }
+
+      .event-title {
+        font-size: 1.3rem;
       }
     }
   </style>
@@ -397,17 +404,19 @@
         <div class="page-back">
           <div class="welcome-panel">
             <h4>Antani Family Warmly Welcomes You<br><br>
-           For Engagement Ceremony Of</h4>
+            For Engagement Ceremony Of</h4>
+            
             <div class="heart-outline-wrapper">
-  <svg class="heart-outline-svg" viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg">
-    <!-- K (Shifted Closer) -->
-     <text x="100" y="70" font-family="'Alex Brush', cursive" font-size="28" fill="#c59b27" font-weight="bold" text-anchor="end">K</text>
-    <!-- ♡ Emoji in Center -->
-    <text x="140" y="73" font-size="38" fill="#c59b27" text-anchor="middle" font-weight="bold">♡</text>
-    <!-- H (Shifted Closer) -->
-    <text x="180" y="70" font-family="'Alex Brush', cursive" font-size="28" fill="#c59b27" font-weight="bold" text-anchor="start">H</text>
-  </svg>
-</div>
+              <svg class="heart-outline-svg" viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg">
+                <!-- K (Closer) -->
+                <text x="100" y="70" font-family="'Alex Brush', cursive" font-size="28" fill="#c59b27" font-weight="bold" text-anchor="end">K</text>
+                <!-- ♡ Center -->
+                <text x="140" y="73" font-size="38" fill="#c59b27" text-anchor="middle" font-weight="bold">♡</text>
+                <!-- H (Closer) -->
+                <text x="180" y="70" font-family="'Alex Brush', cursive" font-size="28" fill="#c59b27" font-weight="bold" text-anchor="start">H</text>
+              </svg>
+            </div>
+            
             <p class="cursive-text">Together with our families, we warmly invite you to our Engagement Ceremony.</p>
           </div>
         </div>
@@ -417,7 +426,7 @@
       <div class="page" id="page2" onclick="flipPage2()">
         <div class="page-front">
           <h3 class="event-title">Save The Date<br>
-          <span style="font-size: 1rem;">16/08/2026</span></h3>
+          <span style="font-size: 0.9rem;">16/08/2026</span></h3>
           
           <div class="family-details">
             <div class="family-row">
@@ -432,20 +441,20 @@
               <span class="family-highlight">Niece Of</span>
               <span class="family-names">ArpanBhai Antani & AnandiBen Antani</span>
             </div>
-            <div style="margin-top: 4px;">
+            <div style="margin-top: 3px;">
               <span class="family-names"><span style="color:#c59b27;">Sister Of:</span> Khushi Antani</span>
             </div>
-            <p style="font-size: 0.65rem; font-style: italic; color: #666; border-top: 1px solid rgba(197, 155, 39, 0.2); padding-top: 4px; margin-top: 4px;">
-              "You all are warmly invited to our Daughter/Niece's/Sister's Ring Ceremony"
+            <p style="font-size: 0.6rem; font-style: italic; color: #666; border-top: 1px solid rgba(197, 155, 39, 0.2); padding-top: 3px; margin-top: 3px;">
+              "You all are warmly invited to our Ring Ceremony"
             </p>
           </div>
 
           <div class="details-box">
-            <p class="cursive-text" style="font-size: 1.1rem;">
+            <p class="cursive-text" style="font-size: 1.05rem;">
               We request the pleasure of your company at the engagement ceremony of our daughter <br>
-              <span style="font-family:'Playfair Display', serif; font-size:0.95rem; font-weight:bold; color:#c59b27;">Krupa</span> 
+              <span style="font-family:'Playfair Display', serif; font-size:0.9rem; font-weight:bold; color:#c59b27;">Krupa</span> 
               with 
-              <span style="font-family:'Playfair Display', serif; font-size:0.95rem; font-weight:bold; color:#c59b27;">Henil</span>.
+              <span style="font-family:'Playfair Display', serif; font-size:0.9rem; font-weight:bold; color:#c59b27;">Henil</span>.
             </p>
           </div>
           <div class="next-btn">Click for Venue Info ➔</div>
